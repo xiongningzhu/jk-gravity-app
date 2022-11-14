@@ -1,20 +1,10 @@
-package com.diandianfu.shooping.base;
+package com.zng.jk_gravity_app.base;
 
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 
-import com.diandianfu.shooping.been.FirstCloseBeen;
-import com.diandianfu.shooping.been.TbConfig;
-import com.diandianfu.shooping.consts.Const;
-import com.google.gson.Gson;
-import com.diandianfu.shooping.ali.SharedPreferencesUtils;
-import com.diandianfu.shooping.ali.SystemUtils;
-import com.diandianfu.shooping.httpinfo.OkHttpUtils;
-import com.diandianfu.shooping.R;
-import com.diandianfu.shooping.utils.AppUtils;
+
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
 import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
@@ -23,13 +13,9 @@ import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
-import com.tb.mob.TbManager;
-import com.tb.mob.config.TbInitConfig;
 import com.tencent.bugly.crashreport.CrashReport;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
+import com.zng.jk_gravity_app.R;
+import com.zng.jk_gravity_app.util.AppUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,80 +23,17 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import okhttp3.MediaType;
-import okhttp3.Request;
-import okhttp3.RequestBody;
+
 
 public class BaseApplication extends Application {
-
-    public MediaType JSON
-            = MediaType.parse("application/json; charset=utf-8");
-    //    public static final MediaType JSON
-//            = MediaType.parse("application/x-www-form-urlencoded");
-    //手机品牌
-    public String PHONEBRAND = "phoneBand";
-    //手机品牌
-    public String PHONEIMEI = "phoneimei";
-    //手机型号
-    public String PHONEMODEL = "phoneModel";
-    //Android版本
-    public String ANDROIDVER = "androidVer";
-    //手机系统
-    public String PHONESYS = "phoneSys";
-    //app版本
-    public String APPCODE = "appCode";
-    //app版本号
-    public String APPVER = "appVerName";
-    //app渠道
-    public String APPCHANNEL = "channel";
-    //apptoken
-    public String TOKEN = "token";
-
-    //----------------------------------------
-    //app名称
-    public static String APP_NAME = "";
-    //app版本name
-    public static String APP_VERSION_NAME = "";
-    //app版本code
-    public static int APP_VERSION_CODE = 0;
-    //app渠道
-    public static String appchannel = "";
-    //IMEI
-    public static String getIMEI = "getIMEI";
-    //手机品牌
-    public static String phoneBand = "phoneBand";
-    //手机型号
-    public static String phoneModel = "phoneModel";
-    //Android版本
-    public static String androidVer = "androidVer";
-    //手机系统
-    public static String phoneSys = "android";
-    //点击间隔
     public static int lastClickSecond = 300;
     private static long lastClick = 0;
     private long TimeOut = 1000;
     public static BaseActivity baseActivity;
-    public static BaseNoBarActivity basenobarActivity;
-
-    private Map<String, String> stringStringMap;
-    private RequestBody body;
-    private Request.Builder request;
-    public static String LoginId;
-    private Gson gson;
-    private String jsonData;
-    private SharedPreferencesUtils sharedPreferencesUtils;
-    public static boolean dialogIsshow = false;
-    //判断是否第一次进入
-    private boolean firstLaunch;
-
-    private static BaseApplication application;
-    OkHttpUtils okHttpUtils = new OkHttpUtils();
-    /*
-     * 返回application
-     * */
-    public static BaseApplication getApplication() {
-        return application;
-    }
+    //app名称
+    public static String APP_NAME = "";
+    //app版本name
+    public static String APP_VERSION_NAME = "";
     //static 代码段可以防止内存泄露
     static {
         //设置全局的Header构建器
@@ -134,38 +57,9 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //在Application创建时,读取Application
-        application = this;
-        sharedPreferencesUtils = new SharedPreferencesUtils(this);
-        firstLaunch = (boolean) sharedPreferencesUtils.getParam("firstLaunch", true);
-        if(!firstLaunch){
-            initQuanXian();
-        }
-        EventBus.getDefault().register(this);
-    }
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onGetMessage(FirstCloseBeen message) {
-        if (message.message.equals("刷新")) {
-            initQuanXian();
-        }
-    }
-    public void  initQuanXian(){
-
         APP_NAME = AppUtils.getAppName(this);
         APP_VERSION_NAME = AppUtils.getVersionName(this);
-
-        APP_VERSION_CODE = AppUtils.getVersionCode(this);
-        appchannel = AppUtils.getAppMetaData(getBaseContext(), "YYYYYY");
-        phoneBand = SystemUtils.getDeviceBrand();
-        phoneModel = SystemUtils.getSystemModel();
-        androidVer = SystemUtils.getSystemVersion();
-        if (SystemUtils.getIMEI(this) != null) {
-            getIMEI = SystemUtils.getIMEI(this);
-        }
-        //腾讯bugly
         initBugly();
-        if(Const.openguanggao){
-            initTb();
-        }
     }
 
     public static Timer timer;
@@ -193,7 +87,7 @@ public class BaseApplication extends Application {
             自定义日志将会在Logcat中输出。
             建议在测试阶段建议设置成true，发布时设置为false。*/
 
-        CrashReport.initCrashReport(getApplicationContext(), "8dcd9ff3c2", true, strategy);
+        CrashReport.initCrashReport(getApplicationContext(), "1ed7289131", true, strategy);
 
         //Bugly.init(getApplicationContext(), "1374455732", false);
     }
@@ -358,24 +252,5 @@ public class BaseApplication extends Application {
         lastShoopClickTime = curClickTime;
         return flag;
     }
-    //SDK初始化
-    private void initTb() {
-        TbInitConfig config = new TbInitConfig.Builder()
-                .appId(TbConfig.appId)//初始化id（平台上申请：应用列表的应用id）
-                .initAgain(true)//是否兼容多个广告商
-                .directDownload(true)//点击后是否直接下载
-                .supportMultiProcess(false)
-                .build();
-        TbManager.init(this, config, new TbManager.IsInitListener() {
-            @Override
-            public void onFail(String s) {
 
-            }
-
-            @Override
-            public void onSuccess() {
-
-            }
-        });
-    }
 }

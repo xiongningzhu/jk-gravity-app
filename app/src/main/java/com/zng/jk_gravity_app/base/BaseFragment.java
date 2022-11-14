@@ -1,4 +1,4 @@
-package com.diandianfu.shooping.base;
+package com.zng.jk_gravity_app.base;
 
 
 import android.content.Context;

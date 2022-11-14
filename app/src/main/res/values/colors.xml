@@ -3,4 +3,68 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="blue">#14a2f4</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="switch_btn_colors">#87AADC</color>
+    <!--红橙黄绿青蓝紫-->
+    <color name="colorRed">#FFff0000</color>
+    <color name="colorOrange">#FFff8400</color>
+    <color name="colorYellow">#FFffff00</color>
+    <color name="colorGreen">#FF00ff00</color>
+    <color name="colorCyan">#FF00ffaf</color>
+    <color name="colorBule">#FF0000ff</color>
+    <color name="colorPurple">#FF800080</color>
+    <!--时间选择颜色-->
+    <color name="date_picker_bg">#FFFFFF</color>
+    <color name="date_picker_divider">#11112233</color>
+    <color name="date_picker_text_light">#000000</color>
+    <color name="date_picker_text_dark">#B3B3B3</color>
+    <!--黑白灰—灰1灰2灰3灰4-->
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFffffff</color>
+    <color name="colorGray1">#FF282828</color>
+    <color name="colorGray2">#FF8b8b8b</color>
+    <color name="colorGray3">#FFd9d9d9</color>
+    <color name="colorGray4">#FFeeeeee</color>
+    <!--黑白灰—灰1灰2灰3灰4-->
+    <color name="main_colorGray">#F8F8F7</color>
+    <!--黑白灰—灰1灰2灰3灰4-->
+    <color name="main_but_textcolor">#2075F5</color>
+    <color name="main_but_textcolor01">#afafaf</color>
+
+    <!--加载中圈圈颜色-->
+    <color name="loding_color">#6E6D6D</color>
+    <!--加载中背景颜色-->
+    <color name="loding_bg_color">#FFFFFF</color>
+    <!--对话框背景色-->
+    <color name="msgDialogColor">#AA040404</color>
+    <color name="msgDialogTextColor">#2A2A2A</color>
+
+    <!--main主题色-->
+    <color name="main_Primary_color">#DAB974</color>
+    <!--main字色黑-->
+    <color name="main_textcolorB">#2A2A2A</color>
+    <color name="main_textcolorB999999">#999999</color>
+    <color name="main_textcolor6">#666666</color>
+    <color name="main_textcolor9">#999999</color>
+    <color name="main_table">#333333</color>
+
+    <color name="black">#191919</color>
+    <!--f1字色讲师小字色-->
+    <color name="f1_js_minicolor">#666666</color>
+    <color name="view_blue">#2075F5</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_1779FF">#1779FF</color>
+    <color name="color_999999">#999999</color>
+    <color name="gray_line">#F2F2F2</color>
+    <color name="blue_button_text">#2075F5</color>
+    <color name="blue_button_textFF1C47">#FF1C47</color>
+
+    <color name="gray_alpha">#aa848e99</color>
+    <color name="fintcolors">#272f38</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorOrder">#E8321D</color>
+
+    <color name="colorGrayan">#E4E4E4</color>
 </resources>
