@@ -34,7 +34,7 @@ public abstract class BaseActivity extends FragmentActivity implements
     /**
      * 是否禁止旋转屏幕
      **/
-    private boolean isAllowScreenRoate = true;
+    private boolean isAllowScreenRoate = false;
     /**
      * 当前Activity渲染的视图View
      **/

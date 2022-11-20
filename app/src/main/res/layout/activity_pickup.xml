@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.zhy.autolayout.AutoRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
+    <com.zng.jk_gravity_app.view.StatusBarHeightView
+        android:id="@+id/main_StatusBarHeightView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_height">
+    </com.zng.jk_gravity_app.view.StatusBarHeightView>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/titleBarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_StatusBarHeightView"
+        android:background="@color/white">
+        <include layout="@layout/title_layout"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <!--筛选条件-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleBarView"
+        android:background="@drawable/white_ban_item">
+    <!--左部滑块-->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="103dp"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@drawable/white_ban_item">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/more_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_ban2_item">
+            </androidx.recyclerview.widget.RecyclerView>
+        </com.zhy.autolayout.AutoLinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--右边数据展示-->
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/white">
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                        <com.zhy.autolayout.AutoRelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:visibility="visible"
+                            android:layout_centerVertical="true">
+                            <include layout="@layout/activity_search"></include>
+                        </com.zhy.autolayout.AutoRelativeLayout>
+                    </com.zhy.autolayout.AutoRelativeLayout>
+                    <!---->
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp">
+                        <include layout="@layout/activity_header_bottom"></include>
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="30dp">
+                    <Button
+                        android:id="@+id/btn_affirm"
+                        android:layout_width="126dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:text="确定"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/red_ban_item"
+                        android:visibility="visible"></Button>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </RelativeLayout>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+    <!---->
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/line_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/titleBarView"
+        android:visibility="gone"
+        android:background="@drawable/white_ban_item">
+
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

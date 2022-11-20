@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@mipmap/group"/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/register_bag">
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:hint="请输入账号"
+                android:paddingLeft="10dp"
+                android:background="@drawable/register_bag"
+                android:textColor="@color/main_textcolorB"
+                android:textColorHint="@color/main_textcolor9"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="14sp" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@mipmap/frame"/>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/register_bag"
+            android:layout_below="@+id/line_city">
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:hint="登录密码"
+                android:inputType="textPassword"
+                android:background="@drawable/register_bag"
+                android:textColor="@color/main_textcolorB"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/main_textcolor9"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:textSize="14sp" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="287dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="10dp"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/loginbag"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"></Button>
+
+    <TextView
+        android:id="@+id/text_retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码？"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"></TextView>
+</com.zhy.autolayout.AutoLinearLayout>

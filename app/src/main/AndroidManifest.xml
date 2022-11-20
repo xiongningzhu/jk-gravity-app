@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.zng.jk_gravity_app">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:name=".base.BaseApplication"
         android:allowBackup="true"
@@ -17,6 +18,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.HomeActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.RevertActvity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.PickUpActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.MatterActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.ReplenishActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.ReceiveActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.DetailsMessageActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.ReplenishAffirmActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.GuiHuanAffirmActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".activity.LingYongAffirmActivity"
+            android:resizeableActivity="false"
+            tools:ignore="LockedOrientationActivity"></activity>
+
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
     </application>
 
 </manifest>

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">jk-gravity-app</string>
+    <dimen name="titlebar_textsize">15dp</dimen>
+    <dimen name="loding_w">100px</dimen>
+    <dimen name="loding_h">100px</dimen>
+
+    <dimen name="picker_view_height">160dp</dimen>
+    <dimen name="date_unit_text_size">18sp</dimen>
+    <!--时间选择器-->
+    <string name="cancel">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="confirm">确定</string>
+    <string name="year"></string>
+    <string name="month"></string>
+    <string name="day"></string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
 </resources>

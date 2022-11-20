@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    >
+    <RelativeLayout
+        android:id="@+id/line_item"
+        android:layout_width="70dp"
+        android:layout_height="35dp">
+        <ImageView
+            android:id="@+id/image_bag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nat_shap"
+            android:layout_margin="5dp"></ImageView>
+        <ImageView
+            android:id="@+id/image_bag2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nat_shap2"
+            android:layout_margin="5dp"
+            android:visibility="gone"></ImageView>
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第一层"
+            android:textSize="11sp"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"></TextView>
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/title_layout_al"
+    android:background="@color/colorWhite"
+    android:gravity="center_vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        style="@style/title_layout">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/left_img_view"
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back_hei"
+                android:visibility="visible"
+                android:layout_marginLeft="10dp"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+        <TextView
+            android:id="@+id/title_bar_text"
+            style="@style/title_text"
+            android:text="@string/app_name">
+        </TextView>
+
+        <TextView
+            android:id="@+id/title_addadress"
+            style="@style/title_keep_text"
+            android:text="58s"
+            android:visibility="visible">
+
+        </TextView>
+        <TextView
+            android:id="@+id/title_jilu"
+            style="@style/title_keep_text"
+            android:text="充值记录"
+            android:visibility="gone">
+
+        </TextView>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

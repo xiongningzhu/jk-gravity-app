@@ -13,11 +13,11 @@ import android.widget.EditText;
 
 import androidx.fragment.app.FragmentActivity;
 
-import com.diandianfu.shooping.R;
-import com.diandianfu.shooping.ali.SharedPreferencesUtils;
-import com.diandianfu.shooping.ali.StatusBarUtil;
-import com.diandianfu.shooping.ali.ToastUtils;
-import com.diandianfu.shooping.interfaces.OutLoginOnLiscent;
+import com.zng.jk_gravity_app.R;
+import com.zng.jk_gravity_app.interfaces.OutLoginOnLiscent;
+import com.zng.jk_gravity_app.util.SharedPreferencesUtils;
+import com.zng.jk_gravity_app.util.StatusBarUtil;
+import com.zng.jk_gravity_app.util.ToastUtils;
 
 
 public abstract class BaseNoBarActivity extends FragmentActivity implements

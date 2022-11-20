@@ -43,7 +43,7 @@
     <!--main主题色-->
     <color name="main_Primary_color">#DAB974</color>
     <!--main字色黑-->
-    <color name="main_textcolorB">#2A2A2A</color>
+    <color name="main_textcolorB">#1A1A1A</color>
     <color name="main_textcolorB999999">#999999</color>
     <color name="main_textcolor6">#666666</color>
     <color name="main_textcolor9">#999999</color>

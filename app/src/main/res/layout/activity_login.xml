@@ -5,14 +5,93 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@mipmap/loginbg">
         <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="600dp"
+            android:id="@+id/line_login"
+            android:layout_width="450dp"
             android:layout_height="305dp"
             android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_ban_item">
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp">
+                    <include layout="@layout/activity_login_title"></include>
+                </com.zhy.autolayout.AutoLinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line"></View>
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/line_zhanghao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="visible">
+                <include layout="@layout/activity_login_pwd"></include>
+            </com.zhy.autolayout.AutoLinearLayout>
+            <!--人脸识别-->
+            <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/line_face"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+                <include layout="@layout/activity_login_face"></include>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+        <!--录取人脸-->
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/line_enterface"
+            android:layout_width="450dp"
+            android:layout_height="305dp"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:background="@drawable/white_ban_item">
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人信息采集"
+                            android:textColor="#262626"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"/>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/line_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@mipmap/chahao"
+                            ></ImageView>
+                    </com.zhy.autolayout.AutoLinearLayout>
 
+                </com.zhy.autolayout.AutoRelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line"></View>
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <include layout="@layout/activity_person_message"></include>
+            </com.zhy.autolayout.AutoLinearLayout>
         </com.zhy.autolayout.AutoLinearLayout>
     </RelativeLayout>
 </RelativeLayout>

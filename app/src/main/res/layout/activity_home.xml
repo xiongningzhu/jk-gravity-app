@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/loginbg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.zng.jk_gravity_app.view.StatusBarHeightView
+        android:id="@+id/main_StatusBarHeightView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:use_type="use_height">
+    </com.zng.jk_gravity_app.view.StatusBarHeightView>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/titleBarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_StatusBarHeightView"
+        android:background="@color/white">
+        <include layout="@layout/title_top_layout"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <!--第一种-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBarView"
+        android:visibility="visible">
+        <include layout="@layout/activity_mian_one"></include>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <!--第二种-->
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleBarView"
+        android:visibility="gone">
+        <include layout="@layout/activity_hang_main"></include>
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技术支持：上海匠凯信息科技"
+        android:textColor="#3F3B3A"
+        android:textSize="11dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"></TextView>
+</com.zhy.autolayout.AutoRelativeLayout>

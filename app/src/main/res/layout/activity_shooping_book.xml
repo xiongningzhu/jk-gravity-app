@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/rela_shooping_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lubo_item_Iv_car"
+            app:cardCornerRadius="5px"
+            android:layout_width="wrap_content"
+            app:cardElevation="0dp"
+            android:layout_height="wrap_content">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/lubo_item_Iv_layout_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/lubo_item_Iv_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/image_shopping"
+                        android:layout_width="103dp"
+                        android:layout_height="68dp"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/corners"></ImageView>
+                    <CheckBox
+                        android:id="@+id/remember"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:checked="true"
+                        style = "@style/CheckBox"
+                        android:layout_marginLeft="92.5dp"/>
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.diandianfu.shooping.ali.StatusBarUtil;
+import com.zng.jk_gravity_app.util.StatusBarUtil;
 
 
 /**

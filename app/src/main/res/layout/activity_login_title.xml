@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<com.zhy.autolayout.AutoLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linr_button_one"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/text_button_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号登录"
+                android:textSize="16sp"
+                android:textColor="#262626">
+            </TextView>
+            <View
+                android:id="@+id/line_button_one"
+                android:layout_width="30dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:background="@drawable/blue_line_corners">
+            </View>
+        </com.zhy.autolayout.AutoLinearLayout>
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/linr_button_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/text_button_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人脸识别登录"
+                android:textSize="16sp"
+                android:textColor="#262626">
+            </TextView>
+            <View
+                android:id="@+id/line_button_three"
+                android:layout_width="30dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@drawable/blue_line_corners">
+            </View>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
